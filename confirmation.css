@@ -1,0 +1,335 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap');
+
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+}
+
+/*------------------------------------------Header Menu--------------------------*/
+.float-menu{
+    width:420px;
+    height:100vh;
+    background-color: white;
+    position: fixed;
+    top: 15%;
+    left: -440px;
+    box-shadow: 0 2px 5px #ccc;
+    z-index: 20;
+}
+
+.float-menu-container{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.floatbar-menu-item{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 28px;
+    color: black;
+    padding: 30px 40px;
+    border-bottom: 1px solid #ccc;
+}
+
+.floatbar-search{
+    width:100%;
+    position: relative;
+}
+
+.floatbar-search i{
+    position: absolute;
+    color: #999;
+    font-size: 18px;
+    top: 50%;
+    left: 8%;
+    transform: translateY(-50%);
+}
+
+.floatbar-search input{
+    width: 100%;
+    background-color: rgb(245, 242, 242, 0.4);
+    box-sizing: border-box;
+    padding: 26px 24px 26px 72px;
+    font-size: 20px;
+    color: black;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #ccc; 
+}
+.hamburger-menu{
+    font-size: 24px;
+    display: none;
+}
+
+.topbar {
+    width: 100%;
+    box-shadow: 0 2px 5px #ccc;
+    background-color: white;
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 16px 8%;
+}
+
+.brand-logo{
+    font-size: 36px;
+    font-weight: 400;
+    margin-right: 16px;
+    text-decoration: none;
+    color: black;
+}
+
+.brand-logo span{
+    font-weight: 800;
+}
+
+.topbar-menu{
+    display: flex;
+    align-items: center;
+}
+.topbar-menu-item{
+    text-decoration: none;
+    color:black;
+    text-transform: uppercase;
+    margin-left: 32px;
+    font-weight: 600;
+}
+
+.topbar-search{
+    width:30%;
+    position: relative;
+}
+
+.topbar-search i{
+    position: absolute;
+    color: #999;
+    font-size: 18px;
+    top: 50%;
+    left: 18px;
+    transform: translateY(-50%);
+}
+
+.topbar-search input{
+    width: 100%;
+    background-color: rgb(245, 242, 242);
+    box-sizing: border-box;
+    padding: 10px 24px 8px 48px;
+    color: black;
+    outline: none;
+    border: none;
+}
+
+.topbar-social{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.topbar-profile{
+    display: flex;
+    align-items: center;
+}
+
+.cart-wrapper{
+    position: relative;
+    margin-right: 26px;
+}
+.cart-wrapper a{
+    text-decoration: none;
+    color: black;
+}
+.cart-wrapper i{
+    font-size: 18px;
+}
+
+.cart-counter{
+    width: 18px;
+    height: 18px;
+    font-size: 12px;
+    margin: 0;
+    box-sizing: border-box;
+    text-align: center;
+    font-weight: 600;
+    background-color: #009688;
+    color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: -12px;
+    right: -12px;
+}
+
+/* media queries for top bar */
+@media screen and (max-width: 991px){
+    .topbar-menu-item{
+        display: none;
+    }
+    .topbar-search{
+        display: none;
+    }
+    .hamburger-menu{
+        display: block;
+    }
+}
+/*----------------------End of Header------------------------*/
+
+.confirmation-container{
+    margin-top: 100px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 4%;
+}
+.tick-container{
+    width: 200px;
+    height: 200px;
+    background-color: #49d049;
+    border-radius: 50%;
+    padding: 40px;
+    box-sizing: border-box;
+    animation-name: divpopup;
+    animation-duration: 300ms;
+    animation-direction: normal;
+    animation-iteration-count: 1;
+    animation-timing-function: ease;
+}
+
+@keyframes divpopup{
+    0%{
+        transform: scale(0.2,0.2);
+    }
+    10%{
+        transform: scale(0.3,0.3);
+    }
+    20%{
+        transform: scale(0.4,0.4);
+    }
+    30%{
+        transform: scale(0.5,0.5);
+    }
+    40%{
+        transform: scale(0.6,0.6);
+    }
+    50%{
+        transform: scale(0.7,0.7);
+    }
+    60%{
+        transform: scale(0.8,0.8);
+    }
+    70%{
+        transform: scale(0.9,0.9);
+    }
+    80%{
+        transform: scale(1,1);
+    }
+    90%{
+        transform: scale(1.1,1.1);
+    }
+    100%{
+        transform: scale(1,1);
+    }
+
+}
+.confirmation-heading{
+    font-size: 36px;
+    color: rgba(0, 0, 0, 0.8);
+    font-weight: 600;
+    margin: 0;
+    margin-top: 48px;
+    margin-bottom: 16px;
+}
+
+.confirmation-description{
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.8);
+    font-weight: 400;
+    margin: 0;
+    margin-bottom: 16px;
+}
+
+.tick-mark{
+    width: 100%;
+}
+
+@media screen and (max-width:767px){
+    .confirmation-container{
+        margin-top: 100px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 4%;
+        padding-left: 5%;
+        padding-right: 5%;
+        text-align: center;
+        box-sizing: border-box;
+    }
+}
+/* ------------------- Footer ----------------------------------*/
+footer {
+    width: 100%;
+    background-color: #1c1b1e;
+    display: flex;
+    justify-content: space-around;
+    box-sizing: border-box;
+    padding: 4% 8%;
+    color: white;
+    text-transform: uppercase;
+    margin-top: 5%;
+}
+
+.footer-menu-heading {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 16px;
+    color: white;
+    opacity: 0.9;
+    letter-spacing: 1px;
+}
+
+.footer-menu-item {
+    text-decoration: none;
+    color: white;
+    display: block;
+    margin-top: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+@media screen and (max-width: 469px){
+    footer{
+        flex-direction: column;
+    }
+    .footer-menu-heading{
+        border-bottom: 1px solid #ccc;
+        margin-top: 40px;
+    }
+}
+@media screen and (max-width: 767px){
+    footer{
+        flex-direction: column;
+    }
+    .footer-menu-heading{
+        border-bottom: 1px solid #ccc;
+        margin-top: 40px;
+    }
+}
+@media screen and (max-width: 991px){
+    .grid-section{
+        padding: 30px 60px 0 60px;
+    }
+}

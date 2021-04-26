@@ -1,0 +1,439 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap');
+
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+}
+
+/*------------------------------------------Header Menu--------------------------*/
+.float-menu{
+    width:420px;
+    height:100vh;
+    background-color: white;
+    position: fixed;
+    top: 15%;
+    left: -440px;
+    box-shadow: 0 2px 5px #ccc;
+    z-index: 20;
+}
+
+.float-menu-container{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.floatbar-menu-item{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 28px;
+    color: black;
+    padding: 30px 40px;
+    border-bottom: 1px solid #ccc;
+}
+
+.floatbar-search{
+    width:100%;
+    position: relative;
+}
+
+.floatbar-search i{
+    position: absolute;
+    color: #999;
+    font-size: 18px;
+    top: 50%;
+    left: 8%;
+    transform: translateY(-50%);
+}
+
+.floatbar-search input{
+    width: 100%;
+    background-color: rgb(245, 242, 242, 0.4);
+    box-sizing: border-box;
+    padding: 26px 24px 26px 72px;
+    font-size: 20px;
+    color: black;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #ccc; 
+}
+.hamburger-menu{
+    font-size: 24px;
+    display: none;
+}
+
+.topbar {
+    width: 100%;
+    box-shadow: 0 2px 5px #ccc;
+    background-color: white;
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 16px 8%;
+}
+
+.brand-logo{
+    font-size: 36px;
+    font-weight: 400;
+    margin-right: 16px;
+    text-decoration: none;
+    color: black;
+}
+
+.brand-logo span{
+    font-weight: 800;
+}
+
+.topbar-menu{
+    display: flex;
+    align-items: center;
+}
+.topbar-menu-item{
+    text-decoration: none;
+    color:black;
+    text-transform: uppercase;
+    margin-left: 32px;
+    font-weight: 600;
+}
+
+.topbar-search{
+    width:30%;
+    position: relative;
+}
+
+.topbar-search i{
+    position: absolute;
+    color: #999;
+    font-size: 18px;
+    top: 50%;
+    left: 18px;
+    transform: translateY(-50%);
+}
+
+.topbar-search input{
+    width: 100%;
+    background-color: rgb(245, 242, 242);
+    box-sizing: border-box;
+    padding: 10px 24px 8px 48px;
+    color: black;
+    outline: none;
+    border: none;
+}
+
+.topbar-social{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.topbar-profile{
+    display: flex;
+    align-items: center;
+}
+
+.cart-wrapper{
+    position: relative;
+    margin-right: 26px;
+}
+.cart-wrapper a{
+    text-decoration: none;
+    color: black;
+}
+.cart-wrapper i{
+    font-size: 18px;
+}
+
+.cart-counter{
+    width: 18px;
+    height: 18px;
+    font-size: 12px;
+    margin: 0;
+    box-sizing: border-box;
+    text-align: center;
+    font-weight: 600;
+    background-color: #009688;
+    color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: -12px;
+    right: -12px;
+}
+
+/* media queries for top bar */
+@media screen and (max-width: 991px){
+    .topbar-menu-item{
+        display: none;
+    }
+    .topbar-search{
+        display: none;
+    }
+    .hamburger-menu{
+        display: block;
+    }
+}
+/*----------------------End of Header------------------------/
+
+/* -----------------------------------------Product Page----------------------------------- */
+#main-product-container{
+    margin:8% 8% 0;
+    display: flex;
+}
+
+#product-thumbnail{
+    width:33%;
+}
+
+#product-details{
+    width:67%;
+    padding-left: 50px;
+}
+
+.product-main-image{
+    width:100%;
+}
+
+.product-preview-image{
+    margin: 5px;
+    width: 18%;
+    cursor: pointer;
+    padding: 4px;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+.product-title{
+    font-weight: 500;
+    font-size: 44px;
+    letter-spacing: -2px;
+    margin:0;
+}
+
+.brand{
+    margin:0;
+    margin-top: 20px;
+    font-weight: 600;
+    font-size: 22px;
+    letter-spacing: 1px;
+    color: rgb(27, 25, 25);
+}
+
+.price-details{
+    margin-top:22px;
+}
+.price{
+    font-weight: 600;
+    font-size: 22px;
+    letter-spacing: 1px;
+    color: rgb(27, 25, 25);
+}
+
+.price-figure{
+    color: #009688;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.description-title{
+    margin-top: 22px;
+    font-weight: 600;
+    font-size: 20px;
+    letter-spacing: 1px;
+    color: rgb(27, 25, 25);
+}
+
+.description{
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #86939e;
+}
+
+.product-preview-title{
+    margin-top: 22px;
+    font-weight: 600;
+    font-size: 20px;
+    letter-spacing: 1px;
+    color: rgb(27, 25, 25);
+}
+
+.atc-button{
+    margin-top:40px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    padding: 10px 20px;
+    letter-spacing: 2px;
+    background-color: #009688;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgb(0 0 0 / 50%);
+}
+.atc-btn-animate{
+    transform: scale(1.1, 1.1);
+}
+
+.active {
+    border: 2px solid #009688;
+}
+
+@media screen and (max-width: 469px){
+    #main-product-container{
+        margin:25% 5% 0 5%;
+        flex-direction: column;
+    }
+    #product-thumbnail{
+        width:100%;
+        display: flex;
+        justify-content: center;
+    }
+    #product-thumbnail img{
+        width:70%;
+    }
+    #product-details{
+        width:100%;
+        box-sizing: border-box;
+        padding:0;
+        display: flex;
+        flex-direction: column;
+    }
+    .product-title{
+        font-weight: 500;
+        font-size: 32px;
+        letter-spacing: 0.5px;
+    }
+    .brand{
+        margin-top: 5px;
+    }
+    .product-preview{
+        order: -1;
+        display: flex;
+        justify-content: center;
+        margin: 16px auto;
+    }
+    .product-preview-title{
+        display: none;
+    }
+    .atc-button{
+        margin: 5% auto 10%;
+    }
+    .description{
+        margin:0;
+    }
+}
+@media screen and (max-width: 767px){
+    #main-product-container{
+        margin:25% 5% 0 5%;
+        flex-direction: column;
+    }
+    #product-thumbnail{
+        width:100%;
+        display: flex;
+        justify-content: center;
+    }
+    #product-thumbnail img{
+        width:70%;
+    }
+    #product-details{
+        width:100%;
+        box-sizing: border-box;
+        padding:0;
+        display: flex;
+        flex-direction: column;
+    }
+    .product-title{
+        font-weight: 500;
+        font-size: 32px;
+        letter-spacing: 0.5px;
+    }
+    .brand{
+        margin-top: 5px;
+    }
+    .product-preview{
+        order: -1;
+        display: flex;
+        justify-content: center;
+        margin: 16px auto;
+    }
+    .product-preview-title{
+        display: none;
+    }
+    .atc-button{
+        margin: 5% auto 10%;
+    }
+    .description{
+        margin:0;
+    }
+}
+@media screen and (max-width: 991px){
+    #main-product-container{
+        margin-top: 100px;
+    }
+}
+/* ------------------- Footer ----------------------------------*/
+footer {
+    width: 100%;
+    background-color: #1c1b1e;
+    display: flex;
+    justify-content: space-around;
+    box-sizing: border-box;
+    padding: 4% 8%;
+    color: white;
+    text-transform: uppercase;
+    margin-top: 2%;
+}
+
+.footer-menu-heading {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 16px;
+    color: white;
+    opacity: 0.9;
+    letter-spacing: 1px;
+}
+
+.footer-menu-item {
+    text-decoration: none;
+    color: white;
+    display: block;
+    margin-top: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+@media screen and (max-width: 469px){
+    footer{
+        flex-direction: column;
+    }
+    .footer-menu-heading{
+        border-bottom: 1px solid #ccc;
+        margin-top: 40px;
+    }
+}
+@media screen and (max-width: 767px){
+    footer{
+        flex-direction: column;
+    }
+    .footer-menu-heading{
+        border-bottom: 1px solid #ccc;
+        margin-top: 40px;
+    }
+}
+@media screen and (max-width: 991px){
+    .grid-section{
+        padding: 30px 60px 0 60px;
+    }
+}
+
